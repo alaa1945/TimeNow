@@ -1,0 +1,169 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body{
+        font-size: 22px;
+}
+
+.pricing-header h1 {
+        font-size: 3rem;
+        text-align: center;
+        padding: 30px 50px 10px 50px;
+
+}
+
+.pricing-header p {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 20px;
+        color: #707070;
+}
+
+.btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+}
+
+.btn-container:before {
+        content: "Billed Monthly";
+        font-size: 1.3rem;
+}
+
+.btn-container::after {
+        content: "Billed Yearly";
+        font-size: 1.3rem;
+}
+
+.switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        margin: 10px;
+}
+.logo{
+        margin-left: 30px;
+}
+.slider {
+        position: absolute;
+        z-index: -1;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+}
+
+.switch input {
+        display: none;
+}
+
+.slider::before {
+        position: absolute;
+        content: "";
+        height: 25px;
+        width: 25px;
+        left: 5px;
+        bottom: 3px;
+        font-size: 1rem;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50px;
+}
+
+input:checked+.slider {
+        background-color: #0000ff;
+}
+input:checked+.slider:before {
+        transform: translateX(25px);
+}
+.plans {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+}
+.plan {
+        border: 1px solid black;
+        width: 260px;
+        height: 100%;
+        font-size: 1.2rem;
+        margin: 10px;
+}
+.payment {
+        margin: 25px;
+}
+
+.payment h1 {
+        font-size: 2rem;
+}
+
+.payment h1 span {
+        font-size: 1.3rem;
+        color: #707070;
+}
+
+.payment h5 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #707070;
+        padding: 10px 0;
+}
+
+.offers {
+        display: flex;
+        margin: 10px 0;
+}
+
+.offers h5 {
+        padding: 7px;
+}
+
+.offers img {
+        width: 17px;
+}
+
+.offers-btn {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        background-color: rgb(14, 14, 109);
+        color: white;
+        padding: 12px 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+}
+
+.offers-btn:hover{
+        opacity: 0.6;
+}
+.navbar{
+        position: relative!important;
+        z-index: 1000;
+        width: 90%;
+        padding: 30px;
+}
+@media screen and (min-width:800px){
+        .plans{
+                display:flex;
+                flex-direction:row;
+        }
+        .pricing-header p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+
+                width: 100%;
+                max-width: 600px;
+                text-align: center;
+        }
+}
