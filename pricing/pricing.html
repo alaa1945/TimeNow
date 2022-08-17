@@ -47,7 +47,7 @@
         <!-- Switch Button -->
         <div class="btn-container">
           <label class="switch">
-            <input type="checkbox" id="checkbox" onclick="d()" />
+            <input type="checkbox" id="checkbox" onclick="check()" />
             <span class="slider"></span>
           </label>
         </div>
@@ -172,23 +172,19 @@
     </main>
 
     <script>
-      function d() {
+      function check() {
+        let month = document.getElementsByClassName("month");
+        let year = document.getElementsByClassName("year");
         var x = document.getElementById("checkbox").checked;
 
-        if (x == true) {
-          document.getElementById("month").style.display = "none";
-          document.getElementById("month1").style.display = "none";
-          document.getElementById("month2").style.display = "none";
-          document.getElementById("year").style.display = "block";
-          document.getElementById("year1").style.display = "block";
-          document.getElementById("year2").style.display = "block";
-        } else {
-          document.getElementById("year").style.display = "none";
-          document.getElementById("year1").style.display = "none";
-          document.getElementById("year2").style.display = "none";
-          document.getElementById("month").style.display = "block";
-          document.getElementById("month1").style.display = "block";
-          document.getElementById("month2").style.display = "block";
+        for (let i = 0; i < month.length; i++) {
+          if (x == true) {
+            month[i].style.display = "none";
+            year[i].style.display = "block";
+          } else {
+            year[i].style.display = "none";
+            month[i].style.display = "block";
+          }
         }
       }
     </script>
